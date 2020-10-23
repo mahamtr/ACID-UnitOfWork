@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Maai Ham\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Maai Ham\\.nuget\\packages"
+    ]
+  }
+}

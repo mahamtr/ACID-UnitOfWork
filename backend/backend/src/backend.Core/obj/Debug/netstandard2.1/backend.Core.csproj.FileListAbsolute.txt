@@ -1,0 +1,4 @@
+C:\Users\Maai Ham\source\repos\backend\backend\src\backend.Core\obj\Debug\netstandard2.1\backend.Core.csprojAssemblyReference.cache
+C:\Users\Maai Ham\source\repos\backend\backend\src\backend.Core\obj\Debug\netstandard2.1\backend.Core.AssemblyInfoInputs.cache
+C:\Users\Maai Ham\source\repos\backend\backend\src\backend.Core\obj\Debug\netstandard2.1\backend.Core.AssemblyInfo.cs
+C:\Users\Maai Ham\source\repos\backend\backend\src\backend.Core\obj\Debug\netstandard2.1\backend.Core.csproj.CoreCompileInputs.cache

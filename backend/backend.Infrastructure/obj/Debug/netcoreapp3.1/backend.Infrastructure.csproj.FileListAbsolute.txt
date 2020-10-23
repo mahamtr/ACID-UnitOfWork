@@ -1,0 +1,15 @@
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Infrastructure.deps.json
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Infrastructure.dll
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.AssemblyInfo.cs
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Core.dll
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Core.pdb
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.csproj.CopyComplete
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Infrastructure.runtimeconfig.json
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Infrastructure.runtimeconfig.dev.json
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.genruntimeconfig.cache
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\bin\Debug\netcoreapp3.1\backend.Infrastructure.pdb
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.dll
+C:\Users\Maai Ham\source\repos\backend\backend.Infrastructure\obj\Debug\netcoreapp3.1\backend.Infrastructure.pdb

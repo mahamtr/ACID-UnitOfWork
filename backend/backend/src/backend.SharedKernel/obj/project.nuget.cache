@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z1wZAFNELCWPJiNzM7ddPA+4oirry+fbL6ZcsxzvhZEAbFeTopXLwr3SK6k2/TRLPa5CMLF4Mf5TT7hcqQWmEw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maai Ham\\source\\repos\\backend\\backend\\src\\backend.SharedKernel\\backend.SharedKernel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maai Ham\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Maai Ham\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
