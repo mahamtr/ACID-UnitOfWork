@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maai Ham\\source\\repos\\backend\\backend.Core\\backend.Core.csproj": {}
+    "C:\\Users\\Maai Ham\\maai-dev\\ACID-UnitOfWork\\backend\\backend.Core\\backend.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maai Ham\\source\\repos\\backend\\backend.Core\\backend.Core.csproj": {
+    "C:\\Users\\Maai Ham\\maai-dev\\ACID-UnitOfWork\\backend\\backend.Core\\backend.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maai Ham\\source\\repos\\backend\\backend.Core\\backend.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Maai Ham\\maai-dev\\ACID-UnitOfWork\\backend\\backend.Core\\backend.Core.csproj",
         "projectName": "backend.Core",
-        "projectPath": "C:\\Users\\Maai Ham\\source\\repos\\backend\\backend.Core\\backend.Core.csproj",
+        "projectPath": "C:\\Users\\Maai Ham\\maai-dev\\ACID-UnitOfWork\\backend\\backend.Core\\backend.Core.csproj",
         "packagesPath": "C:\\Users\\Maai Ham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maai Ham\\source\\repos\\backend\\backend.Core\\obj\\",
+        "outputPath": "C:\\Users\\Maai Ham\\maai-dev\\ACID-UnitOfWork\\backend\\backend.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Maai Ham\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,19 +46,19 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
               "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[5.0.0-rc.2.20475.17, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[5.0.0-rc.2.20475.6, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

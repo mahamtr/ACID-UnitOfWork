@@ -4,6 +4,7 @@ using backend.Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -50,12 +51,18 @@ namespace backend.API
                                 };
                             });
             services.AddControllers();
-            services.AddDbContext<BankDbContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("BankDbContext")));
+            services.AddDbContext<AppDataContext>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("BankDbContext"),
+           i=> i.MigrationsAssembly("backend.API")
+           ));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDataContext>()
+                .AddDefaultTokenProviders();
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,AppDataContext dbContext)
         {
             app.UseCors("AllowWebApp");
             app.UseSwagger();
@@ -69,6 +76,7 @@ namespace backend.API
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ceutec_credoMatic V1");
                 c.RoutePrefix = string.Empty;
             });
+            dbContext.Database.Migrate();
 
             app.UseHttpsRedirection();
 

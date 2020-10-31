@@ -10,3 +10,15 @@ C:\Users\Maai Ham\source\repos\backend\backend.Core\bin\Debug\netcoreapp3.1\back
 C:\Users\Maai Ham\source\repos\backend\backend.Core\bin\Debug\netcoreapp3.1\backend.Core.runtimeconfig.dev.json
 C:\Users\Maai Ham\source\repos\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.genruntimeconfig.cache
 C:\Users\Maai Ham\source\repos\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.csproj.CoreCompileInputs.cache
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\bin\Debug\netcoreapp3.1\backend.Core.deps.json
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\bin\Debug\netcoreapp3.1\backend.Core.runtimeconfig.json
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\bin\Debug\netcoreapp3.1\backend.Core.runtimeconfig.dev.json
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\bin\Debug\netcoreapp3.1\backend.Core.dll
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\bin\Debug\netcoreapp3.1\backend.Core.pdb
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.csprojAssemblyReference.cache
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.AssemblyInfoInputs.cache
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.AssemblyInfo.cs
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.csproj.CoreCompileInputs.cache
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.dll
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.pdb
+C:\Users\Maai Ham\maai-dev\ACID-UnitOfWork\backend\backend.Core\obj\Debug\netcoreapp3.1\backend.Core.genruntimeconfig.cache

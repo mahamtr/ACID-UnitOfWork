@@ -5,19 +5,19 @@ namespace backend.Infrastructure.Data
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public IRepository<Users> Users { get; private set; }
-        public IRepository<Accounts> Accounts { get; private set; }
+        public IRepository<User> Users { get; private set; }
+        public IRepository<Account> Accounts { get; private set; }
 
         public IRepository<TransactionLog> TransactionLog { get; private set; }
 
-        private readonly BankDbContext _context;
+        private readonly AppDataContext _context;
 
 
-        public UnitOfWork(BankDbContext context)
+        public UnitOfWork(AppDataContext context)
         {
             _context = context;
-            Accounts = new Repository<Accounts>(context);
-            Users = new Repository<Users>(context);
+            Accounts = new Repository<Account>(context);
+            Users = new Repository<User>(context);
             TransactionLog = new Repository<TransactionLog>(context);
         }
 

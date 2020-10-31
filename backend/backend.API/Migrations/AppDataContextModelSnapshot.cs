@@ -25,6 +25,9 @@ namespace backend.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -36,6 +39,8 @@ namespace backend.API.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.ToTable("Users");
                 });
@@ -49,13 +54,7 @@ namespace backend.API.Migrations
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Accounts");
                 });
@@ -72,70 +71,59 @@ namespace backend.API.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("DestinationAccountId")
+                    b.Property<Guid?>("DestinationAccountId")
+                        .HasMaxLength(255)
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("SourceAccountId")
+                    b.Property<Guid?>("SourceAccountId")
+                        .HasMaxLength(255)
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TransactionType")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DestinationAccountId");
-
-                    b.HasIndex("SourceAccountId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("TransactionLog");
                 });
 
-            modelBuilder.Entity("backend.Core.Entities.Account", b =>
+            modelBuilder.Entity("CleanArchitecture.Core.Entities.User", b =>
+                {
+                    b.HasOne("backend.Core.Entities.Account", "Account")
+                        .WithMany("Users")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("backend.Core.Entities.TransactionLog", b =>
                 {
                     b.HasOne("CleanArchitecture.Core.Entities.User", "User")
-                        .WithOne("Account")
-                        .HasForeignKey("backend.Core.Entities.Account", "UserId")
+                        .WithMany("TransacionLogs")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("backend.Core.Entities.TransactionLog", b =>
-                {
-                    b.HasOne("backend.Core.Entities.Account", "DestinationAccount")
-                        .WithMany()
-                        .HasForeignKey("DestinationAccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("backend.Core.Entities.Account", "SourceAccount")
-                        .WithMany()
-                        .HasForeignKey("SourceAccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CleanArchitecture.Core.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DestinationAccount");
-
-                    b.Navigation("SourceAccount");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("CleanArchitecture.Core.Entities.User", b =>
                 {
-                    b.Navigation("Account");
+                    b.Navigation("TransacionLogs");
+                });
+
+            modelBuilder.Entity("backend.Core.Entities.Account", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

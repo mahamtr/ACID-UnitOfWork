@@ -8,40 +8,40 @@ namespace backend.Infrastructure.Data
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private readonly BankDbContext _bankDbContext;
-        public Repository(BankDbContext bankDbContext)
+        private readonly AppDataContext _appDataContext;
+        public Repository(AppDataContext appDataContext)
         {
-            _bankDbContext = bankDbContext;
+            _appDataContext = appDataContext;
         }
         public TEntity GetById(int id)
         {
-            return _bankDbContext.Set<TEntity>().Find(id);
+            return _appDataContext.Set<TEntity>().Find(id);
         }
         public IEnumerable<TEntity> GetAll()
         {
-            return _bankDbContext.Set<TEntity>();
+            return _appDataContext.Set<TEntity>();
         }
         public IEnumerable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> predicate)
         {
-            return _bankDbContext.Set<TEntity>().Where(predicate);
+            return _appDataContext.Set<TEntity>().Where(predicate);
         }
 
         public void Add(TEntity entity)
         {
-            _bankDbContext.Set<TEntity>().Add(entity);
+            _appDataContext.Set<TEntity>().Add(entity);
         }
         public void AddRange(IEnumerable<TEntity> entity)
         {
-            _bankDbContext.Set<TEntity>().AddRange(entity);
+            _appDataContext.Set<TEntity>().AddRange(entity);
         }
 
         public void Remove(TEntity entity)
         {
-            _bankDbContext.Set<TEntity>().Remove(entity);
+            _appDataContext.Set<TEntity>().Remove(entity);
         }
         public void RemoveRange(IEnumerable<TEntity> entity)
         {
-            _bankDbContext.Set<TEntity>().RemoveRange(entity);
+            _appDataContext.Set<TEntity>().RemoveRange(entity);
         }
     }
 }

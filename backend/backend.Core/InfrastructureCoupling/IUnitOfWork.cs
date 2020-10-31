@@ -6,8 +6,8 @@ namespace backend.Infrastructure.Data
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<Users> Users { get; }
-        IRepository<Accounts> Accounts{ get; }
+        IRepository<User> Users { get; }
+        IRepository<Account> Accounts{ get; }
         IRepository<TransactionLog> TransactionLog { get; }
 
 

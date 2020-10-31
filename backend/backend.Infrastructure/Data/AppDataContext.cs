@@ -7,29 +7,31 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.Infrastructure.Data
 {
-    public class BankDbContext : DbContext
+    public class AppDataContext : DbContext
     {
-
-        public BankDbContext(DbContextOptions<BankDbContext> options  )
+        public AppDataContext()
+        {
+            
+        }
+        public AppDataContext(DbContextOptions<AppDataContext> options  )
             : base(options)
         {
 
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Accounts> Accounts { get; set; }
-        public DbSet<TransactionLog> TransactionLog { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        // public DbSet<TransactionLog> TransactionLog { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new AccountConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionLogConfiguration());
 
-            // modelBuilder.ApplyAllConfigurationsFromCurrentAssembly();
-            // modelBuilder.Entity<User>().ToTable("Users");
-            // modelBuilder.Entity<Accounts>().ToTable("Accounts").HasKey("AccountId");
-            // modelBuilder.Entity<TransactionLog>().ToTable("TransactionLog").HasKey("Id");
+
 
         }
 
