@@ -4,7 +4,7 @@ using System.Text;
 
 namespace backend.Core.Entities
 {
-    public class Accounts
+    public class Account
     {
         public Guid Id { get; set; }
         public decimal Balance { get; set; }
