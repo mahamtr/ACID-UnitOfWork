@@ -38,7 +38,7 @@ namespace backend.API.Controllers
 
         public IActionResult Login([FromBody]UserRequestInfo login)
         {
-            IActionResult response = Unauthorized();
+            IActionResult response = Unauthorized("Incorrect username or password");
             var user = _unitOfWork.Users.GetFiltered(i => i.UserName == login.UserName.Trim()).FirstOrDefault();
             if (user == null) return response;
             if (user.AuthenticateUser(login.PassWord))
@@ -55,7 +55,7 @@ namespace backend.API.Controllers
         [Route("Register")]
         public IActionResult Register([FromBody]UserRequestInfo login)
         {
-            IActionResult response = BadRequest();
+            IActionResult response = BadRequest("Username is taken");
             var user = _unitOfWork.Users.GetFiltered(i => i.UserName == login.UserName.Trim()).FirstOrDefault();
             if (user != null) return response;
             var account = new Account()
